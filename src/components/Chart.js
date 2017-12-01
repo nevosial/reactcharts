@@ -5,30 +5,7 @@ class Chart extends Component{
   constructor(props){
     super(props);
     this.state = {
-      chartData:{
-        labels:['Register','Login', 'Logout', 'Payments'],
-        datasets:[
-          {
-            label:'View per page',
-            data:[
-              90,
-              45,
-              30,
-              26,
-            ],
-            backgroundColor:[
-              'rgba(255, 99, 86, 0.6)',
-              'rgba(25, 192, 102, 0.6)',
-              'rgba(75, 159, 132, 0.6)',
-              'rgba(125, 119, 225, 0.6)'
-            ],
-            borderWidth:0.5,
-            borderColor:'#777',
-            hoverBorderWidth:1,
-            hoverBorderColor:'#000'
-          }
-        ]
-      }
+      chartData:props.chartData
     }
   }
 
