@@ -58,7 +58,6 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <Chart chartData={this.state.chartData} legendPosition="bottom"/>
-        <Chart chartData={this.state.chartData} legendPosition="top"/>
       </div>
     );
   }
