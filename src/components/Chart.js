@@ -11,7 +11,7 @@ class Chart extends Component{
 
   static defaultProps = {
     displayTitle:true,
-    displayLegend: true,
+    displayLegend:true,
     legendPosition:'bottom'
   }
 
@@ -39,6 +39,47 @@ class Chart extends Component{
           }
         }}
       />
+
+      <Pie
+        data={this.state.chartData}
+        // width={100}
+        // height={50}
+        options={{
+          title:{
+            display:this.props.displayTitle,
+            text:'Page View for the site',
+            fontSize:25
+          },
+          legend:{
+            display:this.props.displayLegend,
+            position:'this.props.legendPosition',
+            labels:{
+              fontColor:'#000'
+            }
+          }
+        }}
+      />
+
+      <Line
+        data={this.state.chartData}
+        // width={100}
+        // height={50}
+        options={{
+          title:{
+            display:this.props.displayTitle,
+            text:'Page View for the site',
+            fontSize:25
+          },
+          legend:{
+            display:this.props.displayLegend,
+            position:'this.props.legendPosition',
+            labels:{
+              fontColor:'#000'
+            }
+          }
+        }}
+      />
+
       </div>
     )
   }
