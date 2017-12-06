@@ -19,68 +19,52 @@ class Chart extends Component{
 
   render(){
     return(
+
       <div className="chart">
-      <Bar
-        data={this.state.chartData}
-        // width={100}
-        // height={50}
-        options={{
-          title:{
-            display:this.props.displayTitle,
-            text:'Page View for the site',
-            fontSize:25
-          },
-          legend:{
-            display:this.props.displayLegend,
-            position:'this.props.legendPosition',
-            labels:{
-              fontColor:'#000'
-            }
-          }
-        }}
-      />
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+            <Pie
+              data={this.state.chartData}
+               width={100}
+               height={50}
+              options={{
+                title:{
+                  display:this.props.displayTitle,
+                  //text:'Users Registered.',
+                  fontSize:25
+                },
+                legend:{
+                  display:this.props.displayLegend,
+                  position:'this.props.legendPosition',
+                  labels:{
+                    fontColor:'#000'
+                  }
+                }
+              }}
+            />
+            </div>
 
-      <Pie
-        data={this.state.chartData}
-        // width={100}
-        // height={50}
-        options={{
-          title:{
-            display:this.props.displayTitle,
-            text:'Page View for the site',
-            fontSize:25
-          },
-          legend:{
-            display:this.props.displayLegend,
-            position:'this.props.legendPosition',
-            labels:{
-              fontColor:'#000'
-            }
-          }
-        }}
-      />
+            <div className="col-lg-6">
 
-      <Line
-        data={this.state.chartData}
-        // width={100}
-        // height={50}
-        options={{
-          title:{
-            display:this.props.displayTitle,
-            text:'Page View for the site',
-            fontSize:25
-          },
-          legend:{
-            display:this.props.displayLegend,
-            position:'this.props.legendPosition',
-            labels:{
-              fontColor:'#000'
-            }
-          }
-        }}
-      />
 
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-sm-6">
+
+
+            </div>
+
+            <div className="col-lg-6">
+
+            </div>
+
+            </div>
+        </div>
       </div>
+
     )
   }
 }
