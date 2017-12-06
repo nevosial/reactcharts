@@ -9,12 +9,14 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      chartData:{}
+      chartData:{},
+      chartData2:{}
     }
   }
 
   componentWillMount(){
     this.getChartData();
+    this.getChartData2();
   }
 
 
@@ -22,7 +24,7 @@ class App extends Component {
     //Ajax call here and fill the data.
     this.setState({
       chartData:{
-        labels:['Register','Login', 'Logout', 'Payments'],
+        labels:['Citizens','Police', 'Emergency'],
         datasets:[
           {
             label:'View per page',
@@ -30,13 +32,39 @@ class App extends Component {
               90,
               45,
               30,
-              26,
             ],
             backgroundColor:[
               'rgba(255, 99, 86, 0.6)',
               'rgba(25, 192, 102, 0.6)',
-              'rgba(75, 159, 132, 0.6)',
-              'rgba(125, 119, 225, 0.6)'
+              'rgba(75, 159, 132, 0.6)'
+            ],
+            borderWidth:0.5,
+            borderColor:'#777',
+            hoverBorderWidth:1,
+            hoverBorderColor:'#000'
+          }
+        ]
+      }
+    });
+  }
+
+  getChartData2(){
+    //Ajax call here and fill the data.
+    this.setState({
+      chartData2:{
+        labels:['Citizens','Police', 'Emergency'],
+        datasets:[
+          {
+            label:'View per page',
+            data:[
+              80,
+              35,
+              10,
+            ],
+            backgroundColor:[
+              'rgba(255, 99, 86, 0.6)',
+              'rgba(25, 192, 102, 0.6)',
+              'rgba(75, 159, 132, 0.6)'
             ],
             borderWidth:0.5,
             borderColor:'#777',
@@ -55,9 +83,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Insta City Statistics</h1>
         </header>
+        <h1>Users Registered</h1>
         <Chart chartData={this.state.chartData} legendPosition="bottom"/>
+        <h1>Post</h1>
+        <Chart chartData={this.state.chartData2} legendPosition="bottom"/>
+
       </div>
     );
   }
