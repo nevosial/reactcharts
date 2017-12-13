@@ -85,9 +85,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Insta City Statistics</h1>
         </header>
-        <h1>Users Registered</h1>
+        // <h1>Users Registered</h1>
         <Chart chartData={this.state.chartData} legendPosition="bottom"/>
-        <h1>Post</h1>
+        // <h1>Post</h1>
         <Chart chartData={this.state.chartData2} legendPosition="bottom"/>
 
       </div>
