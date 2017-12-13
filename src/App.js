@@ -48,6 +48,7 @@ class App extends Component {
     });
   }
 
+//separate charting.
   getChartData2(){
     //Ajax call here and fill the data.
     this.setState({
